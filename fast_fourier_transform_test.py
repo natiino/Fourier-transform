@@ -6,7 +6,6 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 import matplotlib.pyplot as plt
 import timeit
-from scipy.misc import electrocardiogram
 
 
 # Building a class Signal for better use.
@@ -288,12 +287,12 @@ fourier = Fourier(signal, sampling_rate=200)
 # Plot the spectrum interactively using the class Fourier
 fourier.plot_spectrum(interactive=True)
 
-# Import the ECG signal from scipy package
-from scipy.misc import electrocardiogram
-# Built-in ECG signal
-ecg = electrocardiogram()
-# DFT using the class Fourier
-ecg_spectrum = Fourier(signal = ecg, sampling_rate = 300.0)
-# Plot the time-frequency domains of the ECG signal
-ecg_spectrum.plot_time_frequency(t_title="ECG Signal", f_title="ECG Spectrum",
-                                 t_ylabel="Amplitude[mV]")
+# # Import the ECG signal from scipy package
+# from scipy.misc import electrocardiogram
+# # Built-in ECG signal
+# ecg = electrocardiogram()
+# # DFT using the class Fourier
+# ecg_spectrum = Fourier(signal = ecg, sampling_rate = 300.0)
+# # Plot the time-frequency domains of the ECG signal
+# ecg_spectrum.plot_time_frequency(t_title="ECG Signal", f_title="ECG Spectrum",
+#                                  t_ylabel="Amplitude[mV]")
